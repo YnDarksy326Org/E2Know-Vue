@@ -38,7 +38,6 @@ VueRouter.prototype.replace = function (location, onResolve, onReject) {
 const router = new VueRouter({
     routes:[
         //主路由
-        {name:"Start",path:'/',redirect:"ActivityAudit"},
         {name:"Setting",path:'/Setting',component:Setting},
         {name:"QualificationAudit",path:'/QualificationAudit',component:QualificationAudit},
         {name:"ActivityAudit",path:'/ActivityAudit',component:ActivityAudit},

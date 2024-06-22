@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <Layout></Layout>
+    <earMainMenuVue></earMainMenuVue>
   </div>
 </template>
 
 <script>
 import Layout from './view/Layout.vue';
 import axios from "axios"
+import mainMenu from './view/mainMenu.vue';
+import earMainMenuVue from './components/earphone/earMainMenu.vue';
 export default {
   name: 'App',
   components: {
+    mainMenu,
     Layout,
+    earMainMenuVue
   },
   beforeMount(){
     Promise.all([
