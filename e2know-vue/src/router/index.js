@@ -3,6 +3,9 @@ import ActivityAudit from './ActivityAudit.vue'
 import QualificationAudit from './QualificationAudit.vue'
 import Setting from './Setting.vue'
 import PieChart from './PieChart.vue'
+import UserMainMenu from '../components/usercomponents/UserMainMenu.vue'
+import earMainMenu from '../components/earphone/earMainMenu.vue'
+import PersonalMainMenu from '../components/personal/PersonalMainMenu.vue'
 
 const originalPush = VueRouter.prototype.push
 const originalReplace = VueRouter.prototype.replace
@@ -42,6 +45,10 @@ const router = new VueRouter({
         {name:"QualificationAudit",path:'/QualificationAudit',component:QualificationAudit},
         {name:"ActivityAudit",path:'/ActivityAudit',component:ActivityAudit},
         {name:"PieChart",path:'/PieChart',component:PieChart},
+        {name:"UserMainMenu",path:'/UserMainMenu',component:UserMainMenu},
+        {name:"earMainMenu",path:'/earMainMenu',component:earMainMenu},
+        {name:"start",path:'/',redirect:'/UserMainMenu'},
+        {name:"PersonalMainMenu",path:'/PersonalMainMenu',component:PersonalMainMenu},
     ],
     mode: 'history'
 });

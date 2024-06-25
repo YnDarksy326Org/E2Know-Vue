@@ -19,12 +19,18 @@
             </div>
             <div class="content">
                 <el-row :gutter="10" >
-                <el-col  :span="8" v-for="(o, index) in cards" :key="index" >
-                    <el-card :body-style="{ padding: '0px' }">
-                    <img :src="o.imgurl" class="image" shadow="always" @click="showEarPhone">
-                    <div style="padding: 14px;">
-                        <span>{{o.name}}</span>
-                    </div>
+                <el-col  :span="12" v-for="(o, index) in cards" :key="index" >
+                    <el-card :body-style="{ padding: '5px' }">
+                            <img :src="o.imgurl" class="image" shadow="always" @click="showEarPhone">
+                            <div class="itemname">{{o.name}}</div>
+                            <div>
+                                <span class="item">续航:10h</span>
+                                <span class="item">重量:10h</span>
+                            </div>
+                            <div>
+                                <span class="item">防水:10h</span>
+                                <span class="item">麦克风数:10h</span>
+                            </div>
                     </el-card>
                 </el-col>
                 </el-row>
@@ -41,7 +47,7 @@ export default {
   },
   methods:{
     showEarPhone(){
-        
+        this.$router.push('/earMainMenu');
         console.log("点击了图片")
     }
   },
@@ -50,7 +56,7 @@ export default {
         cards:[
             {
                 ID:"1",
-                imgurl:"../../assets/img/earpic.png",
+                imgurl:"../../assets/img/earpic.jpg",
                 name:"耳机2",
                 battylife:"",
                 weight:"",
@@ -339,6 +345,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.itemname {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.item {
+    margin: 10px 10px;
+    text-align: left;
+}
 .content2 {
     padding-left: 32vh;
 }
@@ -352,7 +366,14 @@ export default {
 }
 .el-card {
     border: solid 1px gray;
+    margin-bottom: 70px;
     cursor: pointer;
+    border-radius: 5px;
+    width: 600px;
+    box-shadow: 0 0 5px 1px #999 ;
+}
+.el-select {
+    margin: 10px 10px;
 }
 .SortText {
     text-align: left;
@@ -365,7 +386,8 @@ img {
 }
 .content {
     margin-top: 10px;
-    margin-right:32vh;
+    margin-left: 100px;
+    margin-right: 32vh;
 }
 .el-select {
     padding-bottom: 10px;
@@ -379,11 +401,11 @@ img {
     width: 200px;
 }
 .outter {
+    float:left;
     top:2px;
     margin-left:32vh;
     margin-right:10px;
     margin-top:10px;
-    height: 5000px;
     //border: solid 1px #999;
     background-color: white;
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <earMainMenuVue></earMainMenuVue>
+    <mainMenu></mainMenu>
   </div>
 </template>
 

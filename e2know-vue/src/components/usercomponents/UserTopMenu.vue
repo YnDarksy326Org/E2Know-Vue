@@ -2,7 +2,7 @@
     <div class="outter">
         <div class="upper">
             <div class="leftcontent">
-                <span class="content">易知耳</span>
+                <span class="content" @click="backtomain">易知耳</span>
                 <i class="el-icon-search" style="color:white"></i>
                 <input type="text" v-model="input" placeholder="   请输入查找耳机名">
             </div>
@@ -12,8 +12,8 @@
                 <i class="el-icon-user-solid"></i><i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
                 <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>个人资料</el-dropdown-item>
-                <el-dropdown-item>登录</el-dropdown-item>
+                <el-dropdown-item @click.native="personalData"><router-link :to="{path:'/PersonalMainMenu'}">个人资料</router-link></el-dropdown-item>
+                <el-dropdown-item @click.native="login">登录</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
             </div>
@@ -32,9 +32,14 @@
       };
     },
     methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
+      backtomain() {
+        this.$router.push('/UserMainMenu');
       },
+      personalData(){
+      },
+      login(){
+        window.location.href="/PersonalMainMenu"
+      }
     }
   }
 </script>
@@ -53,6 +58,7 @@ body,html{
     font-size: 50px;
     float: left;
     color:white;
+    cursor: pointer;
 }
 
 input {

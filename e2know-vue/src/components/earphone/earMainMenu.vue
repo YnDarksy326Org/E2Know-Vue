@@ -1,21 +1,18 @@
 <template>
     <el-container>
-      <!-- 顶栏 -->
-      <el-header height="60px">
-        <UserTopMenu></UserTopMenu>
-      </el-header>
-      <el-main>
-      </el-main>
+        <MainContent></MainContent>
     </el-container>
 </template>
 
 <script>
 import UserTopMenu from '../usercomponents/UserTopMenu.vue'
+import MainContent from './MainContent.vue'
 
 export default {
   name: 'earMainMenu',
   components: {
     UserTopMenu,
+    MainContent
   },
 }
 </script>
