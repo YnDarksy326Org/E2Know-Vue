@@ -13,8 +13,8 @@
                     <i class="el-icon-headset"></i>
                     <span>音质</span>
                 </div>
-                <div v-for="o in 4" :key="o" class="text item">
-                    {{'列表内容 ' + o }}
+                <div v-for="o in 1" :key="o" class="text item">
+                    {{'最高频率：' + "40000 Hz" }}
                 </div>
                 </div>
                 <div class="box-card">
@@ -22,8 +22,10 @@
                     <i class="el-icon-paperclip"></i>
                     <span>连接方式</span>
                 </div>
-                <div v-for="o in 4" :key="o" class="text item">
-                    {{'列表内容 ' + o }}
+                <div v-for="o in 1" :key="o" class="text item">
+                    {{'无线连接方式：' + "蓝牙" }}
+                    <div></div>
+                    {{'有线连接方式：' + "typec" }}
                 </div>
                 </div>
                 <div class="box-card">
@@ -31,8 +33,8 @@
                     <i class="el-icon-view"></i>
                     <span>降噪</span>
                 </div>
-                <div v-for="o in 4" :key="o" class="text item">
-                    {{'列表内容 ' + o }}
+                <div v-for="o in 1" :key="o" class="text item">
+                    {{'降噪强度：' + "30db" }}
                 </div>
                 </div>
             </div>
@@ -70,14 +72,14 @@ export default {
         textarea:"",
         commentsData:[
             {
-                username:"杨定鑫",
-                comments:"这是一条评论",
-                picurl:"../../assets/img/earpic.jpg"
+                username:"YnDarksy",
+                comments:"哈哈哈，这个耳机太坑了",
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\earpic.jpg")
             },
             {
                 username:"杨定鑫",
-                comments:"这是一条评论",
-                picurl:"../../assets/img/earpic.jpg"
+                comments:"耳机音质非常好",
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\earpic.jpg")
             }
         ]
     }
@@ -87,7 +89,7 @@ export default {
         this.commentsData.push({
             username:"杨定鑫",
             comments:this.textarea,
-            picurl:"../../assets/img/earpic.jpg"
+            picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\earpic.jpg")
         })
         this.textarea = ""
     }
@@ -141,7 +143,6 @@ export default {
 .inner {
     margin-bottom: 30px;
     margin-top: 30px;
-    border: solid 1px black;
     text-align: left;
 }
 .conments {
@@ -158,7 +159,6 @@ export default {
     padding: 30px 0;
 }
 .outter {
-    border: solid 1px black;
     height: 100vh;
 }
 span {
@@ -168,12 +168,10 @@ span {
 .data {
     font-size: 40px;
     padding: 10px 10px;
-    border: solid 1px black;
 }
 .name {
     font-size: 30px;
     padding: 20px 20px;
-    border: solid 1px black;
 }
 .el-card {
     text-align: center;

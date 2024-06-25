@@ -6,6 +6,7 @@ import PieChart from './PieChart.vue'
 import UserMainMenu from '../components/usercomponents/UserMainMenu.vue'
 import earMainMenu from '../components/earphone/earMainMenu.vue'
 import PersonalMainMenu from '../components/personal/PersonalMainMenu.vue'
+import Login from '../components/personal/Login.vue'
 
 const originalPush = VueRouter.prototype.push
 const originalReplace = VueRouter.prototype.replace
@@ -49,6 +50,7 @@ const router = new VueRouter({
         {name:"earMainMenu",path:'/earMainMenu',component:earMainMenu},
         {name:"start",path:'/',redirect:'/UserMainMenu'},
         {name:"PersonalMainMenu",path:'/PersonalMainMenu',component:PersonalMainMenu},
+        {name:"Login",path:'/Login',component:Login},
     ],
     mode: 'history'
 });

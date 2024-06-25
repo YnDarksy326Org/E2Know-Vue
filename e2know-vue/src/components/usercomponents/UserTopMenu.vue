@@ -12,7 +12,7 @@
                 <i class="el-icon-user-solid"></i><i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
                 <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item @click.native="personalData"><router-link :to="{path:'/PersonalMainMenu'}">个人资料</router-link></el-dropdown-item>
+                <el-dropdown-item @click.native="personalData">个人资料</el-dropdown-item>
                 <el-dropdown-item @click.native="login">登录</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
@@ -36,9 +36,10 @@
         this.$router.push('/UserMainMenu');
       },
       personalData(){
+        window.location.href="/PersonalMainMenu"
       },
       login(){
-        window.location.href="/PersonalMainMenu"
+        window.location.href="/Login"
       }
     }
   }
