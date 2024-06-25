@@ -24,11 +24,11 @@
                     <el-card :body-style="{ padding: '5px' }">
                             <img :src="o.imgurl" class="image" shadow="always" @click="showEarPhone">
                             <div class="itemname">{{o.name}}</div>
-                            <div>
+                            <div class="datae">
                                 <span class="item">续航:{{o.battylife}}</span>
                                 <span class="item">重量:{{o.weight}}</span>
                             </div>
-                            <div>
+                            <div class="datae">
                                 <span class="item">防水:{{o.Protection_IP_rating}}</span>
                                 <span class="item">麦克风数:{{o.microphone_number}}</span>
                             </div>
@@ -176,12 +176,15 @@ export default {
 
 <style lang="less" scoped>
 .itemname {
-    margin-bottom: 10px;
+    margin: 20px 0;
     font-size: 30px;
 }
+.datae{
+    margin: 20px 20px;
+}
 .item {
-    margin: 10px 10px;
     text-align: left;
+    margin: 20px 20px;
 }
 .content2 {
     padding-left: 32vh;
@@ -195,12 +198,12 @@ export default {
     line-height: 100px;
 }
 .el-card {
-    border: solid 1px gray;
     margin-bottom: 70px;
     cursor: pointer;
     border-radius: 5px;
     width: 600px;
     box-shadow: 0 0 5px 1px #999 ;
+    border-bottom: 1px solid #999;
 }
 .el-select {
     margin: 10px 10px;
@@ -211,8 +214,8 @@ export default {
     font-weight: bolder;
 }
 img {
-    width: 200px;
-    height: 130px;
+    width: 100px;
+    height: 70px;
 }
 .content {
     margin-top: 10px;

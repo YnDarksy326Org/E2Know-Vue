@@ -178,7 +178,8 @@ span {
     background-color: white;
     margin-left: 32vh;
     margin-right: 32vh;
-    border: solid 1px black;
+    margin-top: 50px;
+    border-bottom: 1px solid #999;
 }
 img {
     height: 300px;
