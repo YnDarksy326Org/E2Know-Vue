@@ -10,11 +10,26 @@
         </div>
       </div>
       <div class="select">
-        <div class="head">收藏</div>
+        <div class="head">收藏：</div>
         <div class="content">
-          <span class="s"><img :src=imgs[0].src></span>
-          <span class="s"><img :src=imgs[1].src></span>
-          <span class="s"><img :src=imgs[2].src></span>
+          <el-table
+            :data="tableData"
+            style="width: 100%">
+            <el-table-column
+              prop="date"
+              label="日期"
+              width="300">
+            </el-table-column>
+            <el-table-column
+              prop="name"
+              label="型号"
+              width="300">
+            </el-table-column>
+            <el-table-column
+              prop="address"
+              label="价格">
+            </el-table-column>
+          </el-table>
         </div>
       </div>
     </div>
@@ -41,7 +56,24 @@ export default {
       {
         src:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\1.jpg")
       }
-      ]
+      ],
+      tableData: [{
+        date: '2024-05-02',
+        name: 'wf-xm5',
+        address: '1000￥'
+      }, {
+        date: '2024-05-04',
+        name: 'freebuts pro',
+        address: '700￥'
+      }, {
+        date: '2024-05-01',
+        name: 'Nuraphone NuraTrue Pro',
+        address: '200￥'
+      }, {
+        date: '2024-05-03',
+        name: 'Bowers & Wilkins Pi7 S2',
+        address: '300￥'
+      }]
     }
   }
 }
@@ -67,17 +99,21 @@ img {
 .select {
   margin-top: 50px;
   border: 1px solid black;
+  border-radius: 5px;
 }
 .el-avatar{
   border: 1px solid black;
 }
 .card {
-  margin: 30px 0;
+  padding-bottom: 30px;
+  padding-top: 5px;
   background-color: skyblue;
+  border-radius: 5px;
 }
 .head {
   font-size: 30px;
   margin-left: 20px;
+  margin-top: 30px;
 }
 .sign {
   padding-left: 50px;
