@@ -6,7 +6,7 @@
         <UserTopMenu></UserTopMenu>
       </el-header>
       <el-main>
-        <UserMainMenu></UserMainMenu>
+        <router-view></router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -21,6 +21,11 @@ export default {
   components: {
     UserTopMenu,
     UserMainMenu
+  },
+  data() {
+    return {
+      route:this.$route.path
+    }
   },
 }
 </script>
@@ -41,6 +46,7 @@ export default {
     text-align: center;
     padding: 0;
     margin: 0;
+    height: 100vh;
   }
   
   body > .el-container {
