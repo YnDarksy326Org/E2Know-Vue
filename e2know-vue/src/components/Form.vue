@@ -6,27 +6,27 @@
         <el-dialog title="添加数据" :visible.sync="dialogFormVisible">
             <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
 
-            <el-form-item label="段号" prop="segment">
+            <el-form-item label="耳机名" prop="segment">
                 <el-input  v-model.number="ruleForm.segment" autocomplete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="油浓度" prop="oilCol">
+            <el-form-item label="价格" prop="oilCol">
                 <el-input  v-model="ruleForm.oilCol" autocomplete="off"></el-input>
             </el-form-item>
 
-            <el-form-item label="水浓度" prop="waterCol">
+            <el-form-item label="防水等级" prop="waterCol">
                 <el-input v-model="ruleForm.waterCol"></el-input>
             </el-form-item>
 
-            <el-form-item label="油质量" prop="oilMess">
+            <el-form-item label="麦克风数量" prop="oilMess">
                 <el-input v-model="ruleForm.oilMess"></el-input>
             </el-form-item>
 
-            <el-form-item label="水质量" prop="waterMess">
+            <el-form-item label="重量" prop="waterMess">
                 <el-input v-model="ruleForm.waterMess"></el-input>
             </el-form-item>
 
-            <el-form-item label="日期">
+            <el-form-item label="录入日期">
                 <div class="block">
                     <el-date-picker
                     v-model="ruleForm.date"
