@@ -7,14 +7,14 @@
       min-width="50"
       prop="segment"
       sortable
-      label="段号"
+      label="耳机名"
       width="100">
       <template slot-scope="scope">
         <span style="margin-left: 10px">{{ scope.row.segment}}</span>
       </template>
     </el-table-column>
     <el-table-column
-      label="水浓度"
+      label="价格"
       prop="WaterCol"
       min-width="100"
       width="300">
@@ -24,7 +24,7 @@
     </el-table-column>
     <el-table-column
       min-width="50"
-      label="油浓度"
+      label="防水等级"
       prop="oilCol"
       width="300">
       <template slot-scope="scope">
@@ -33,7 +33,7 @@
     </el-table-column>
     <el-table-column
       min-width="50"
-      label="油质量"
+      label="麦克风数量"
       prop="oilMess"
       width="300">
       <template slot-scope="scope">
@@ -42,7 +42,7 @@
     </el-table-column>
     <el-table-column
       min-width="50"
-      label="水质量"
+      label="重量"
       prop="waterMess"
       width="300">
       <template slot-scope="scope">
@@ -54,7 +54,7 @@
       :filter-method="filterHandler"
       :formatter="formatter"
       min-width="50"
-      label="日期"
+      label="评分"
       prop="date"
       width="300">
     </el-table-column>
