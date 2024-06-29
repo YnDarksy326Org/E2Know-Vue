@@ -1,23 +1,25 @@
-# e2know-vue
+# 调试命令
 
 ## Project setup
 ```
-yarn install
+npm install
 ```
+### run electron
+npm run start
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+npm run build
 ```
 
 ### Lints and fixes files
 ```
-yarn lint
+npm run lint
 ```
 
 ### Customize configuration
