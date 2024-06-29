@@ -74,12 +74,32 @@ export default {
             {
                 username:"YnDarksy",
                 comments:"哈哈哈，这个耳机太坑了",
-                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\earpic.jpg")
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\head1.jpg")
             },
             {
-                username:"杨定鑫",
+                username:"高加文",
                 comments:"耳机音质非常好",
-                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\earpic.jpg")
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\head2.jpg")
+            },
+            {
+                username:"邓焰文",
+                comments:"同意",
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\head3.jpg")
+            },
+            {
+                username:"tyyq",
+                comments:"太贵了吧",
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\head4.jpg")
+            },
+            {
+                username:"张富钧",
+                comments:"降噪很爽",
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\head5.jpg")
+            },
+            {
+                username:"陈俊毅",
+                comments:"我没意见",
+                picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\head6.jpg")
             }
         ]
     }
@@ -89,7 +109,7 @@ export default {
         this.commentsData.push({
             username:"杨定鑫",
             comments:this.textarea,
-            picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\earpic.jpg")
+            picurl:require("E:\\E2Know\\e2know-vue\\src\\assets\\img\\head7.jpg")
         })
         this.textarea = ""
     }
